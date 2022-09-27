@@ -13,7 +13,10 @@
         "clean": "rimraf lib node_modules",
         "release": "semantic-release",
         "xcode": "open ios/AnalyticsReactNativePluginIdfa.xcodeproj",
-        "prepare": "husky install"
+        "pod:install": "export LC_ALL=en_US.UTF-8 && pod-install --quiet",
+        "prepare": "run-script-os",
+        "prepare:default": "husky install",
+        "prepare:darwin": "husky install && yarn pod:install"
     },
     "lint-staged": {
         "*": "prettier --ignore-unknown --write",
@@ -78,6 +81,7 @@
         "eslint-plugin-react-native": "^4.0.0",
         "eslint-plugin-simple-import-sort": "^8.0.0",
         "husky": "^8.0.1",
+        "pod-install": "^0.1.38",
         "prettier": "2.7.1",
         "react": "18.2.0",
         "react-native": "0.70.1",
