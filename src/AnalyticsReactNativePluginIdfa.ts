@@ -2,12 +2,11 @@
  * This module is just here to have a way to mock the Native Module of IDFA with Detox
  */
 import { NativeModules, Platform } from 'react-native';
+import type { INativeModule, INativeModules } from './types';
 
-export const AnalyticsReactNativePluginIdfa = Platform.select({
+export const AnalyticsReactNativePluginIdfa = Platform.select<INativeModule>({
     default: {
-        getTrackingAuthorizationStatus: () => {
-            return Promise.reject('IDFA is only supported on iOS');
-        },
+        getTrackingAuthorizationStatus: async () => Promise.reject(new Error('IDFA is only supported on iOS')),
     },
-    ios: NativeModules.AnalyticsReactNativePluginIdfa,
+    ios: (NativeModules as INativeModules).AnalyticsReactNativePluginIdfa,
 });
