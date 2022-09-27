@@ -18,3 +18,5 @@ extends:
     - plugin:react-native/all
     - plugin:jest/all
     - prettier
+rules:
+    "@typescript-eslint/naming-convention": 0
