@@ -50,9 +50,12 @@
     },
     "homepage": "https://github.com/segmentio/analytics-react-native#readme",
     "peerDependencies": {
-        "@segment/analytics-react-native": "*"
+        "@segment/analytics-react-native": "*",
+        "react": "*",
+        "react-native": "*"
     },
     "devDependencies": {
+        "@segment/analytics-react-native": "^2.8.0",
         "@semantic-release/changelog": "^6.0.1",
         "@semantic-release/commit-analyzer": "^9.0.2",
         "@semantic-release/git": "^10.0.1",
@@ -60,9 +63,12 @@
         "@semantic-release/npm": "^9.0.1",
         "@semantic-release/release-notes-generator": "^10.0.3",
         "@types/jest": "^27.0.3",
+        "@types/react": "18.0.15",
         "conventional-changelog-conventionalcommits": "^5.0.0",
         "husky": "^8.0.1",
         "prettier": "2.7.1",
+        "react": "^17.0.2",
+        "react-native": "^0.67.2",
         "rimraf": "^3.0.2",
         "semantic-release": "^19.0.3",
         "semantic-release-monorepo": "^7.0.5",
