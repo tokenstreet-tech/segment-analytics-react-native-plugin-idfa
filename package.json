@@ -12,6 +12,7 @@
         "prettier": "prettier --write . --ignore-path ./.prettierignore",
         "clean": "rimraf lib node_modules",
         "release": "semantic-release",
+        "xcode": "open ios/AnalyticsReactNativePluginIdfa.xcodeproj",
         "prepare": "husky install"
     },
     "lint-staged": {

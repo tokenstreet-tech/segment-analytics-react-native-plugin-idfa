@@ -57,7 +57,7 @@ const segmentClient = createClient({
  * which defaults to true. Setting to false prevents the plugin from
  * requesting permission from the user. If you set the parameter to `false` on
  * initialization you **must** call `requestTrackingPermission()`
- *  to retrieve the `idfa`
+ * to retrieve the `idfa`
  */
 const idfaPlugin = new IdfaPlugin(false);
 segmentClient.add({ plugin: idfaPlugin });
