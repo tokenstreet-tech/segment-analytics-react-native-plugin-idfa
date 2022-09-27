@@ -6,8 +6,8 @@ export enum TrackingStatus {
     Unknown = 'unknown',
 }
 
-export type IdfaData = {
+export interface IdfaData {
     adTrackingEnabled: boolean;
     advertisingId: string;
     trackingStatus: TrackingStatus;
-};
+}
