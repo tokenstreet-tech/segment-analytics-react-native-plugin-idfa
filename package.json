@@ -64,6 +64,7 @@
         "@semantic-release/release-notes-generator": "^10.0.3",
         "@types/jest": "^27.0.3",
         "@types/react": "18.0.15",
+        "@types/react-native": "0.69.3",
         "conventional-changelog-conventionalcommits": "^5.0.0",
         "husky": "^8.0.1",
         "prettier": "2.7.1",
