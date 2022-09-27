@@ -1,0 +1,15 @@
+name: Status checks on PR
+on:
+    pull_request:
+        branches:
+            - main
+jobs:
+    yarn_script_validation:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                script: [typescript, lint, build]
+        steps:
+            - uses: actions/checkout@v3
+            - run: yarn --frozen-lockfile
+            - run: yarn ${{ matrix.script }}
