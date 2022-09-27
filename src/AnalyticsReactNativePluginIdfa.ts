@@ -4,10 +4,10 @@
 import { NativeModules, Platform } from 'react-native';
 
 export const AnalyticsReactNativePluginIdfa = Platform.select({
-  default: {
-    getTrackingAuthorizationStatus: () => {
-      return Promise.reject('IDFA is only supported on iOS');
+    default: {
+        getTrackingAuthorizationStatus: () => {
+            return Promise.reject('IDFA is only supported on iOS');
+        },
     },
-  },
-  ios: NativeModules.AnalyticsReactNativePluginIdfa,
+    ios: NativeModules.AnalyticsReactNativePluginIdfa,
 });
