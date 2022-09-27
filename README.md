@@ -1,4 +1,4 @@
-# @segment/analytics-react-native-plugin-idfa
+# @tokenstreet/segment-analytics-react-native-plugin-idfa
 
 `Plugin` which retrieves IDFA data (iOS only). IDFA data will then be included in `event` payloads under `event.context.device`
 
@@ -9,13 +9,13 @@
 Using NPM:
 
 ```bash
-npm install --save @segment/analytics-react-native-plugin-idfa
+npm install --save @tokenstreet/segment-analytics-react-native-plugin-idfa
 ```
 
 Using Yarn:
 
 ```bash
-yarn add @segment/analytics-react-native-plugin-idfa
+yarn add @tokenstreet/segment-analytics-react-native-plugin-idfa
 ```
 
 You also need to ensure you have a description for `NSUserTrackingUsageDescription` in your `Info.plist`, or your app will crash. Have a look at the /example app in the root of this repo.
@@ -29,7 +29,7 @@ In your code where you initialize the analytics client call the `.add(plugin)` m
 ```ts
 import { createClient } from '@segment/analytics-react-native';
 
-import { IdfaPlugin } from '@segment/analytics-react-native-plugin-idfa';
+import { IdfaPlugin } from '@tokenstreet/segment-analytics-react-native-plugin-idfa';
 
 const segmentClient = createClient({
     writeKey: 'SEGMENT_KEY',
@@ -45,28 +45,28 @@ To delay the `IDFA Plugin` initialization (ie. to avoid race condition with push
 ```ts
 import { createClient } from '@segment/analytics-react-native';
 
-import { IdfaPlugin } from '@segment/analytics-react-native-plugin-idfa';
+import { IdfaPlugin } from '@tokenstreet/segment-analytics-react-native-plugin-idfa';
 
 const segmentClient = createClient({
   writeKey: 'SEGMENT_KEY'
 });
 
 ...
-
- /** The IDFA Plugin supports an optional `shouldAskPermission` boolean
- which defaults to true. Setting to false prevents the plugin from
- requesting permission from the user. If you set the parameter to `false` on
- initialization you **must** call `requestTrackingPermission()`
- to retrieve the `idfa`
+/**
+ * The IDFA Plugin supports an optional `shouldAskPermission` boolean
+ * which defaults to true. Setting to false prevents the plugin from
+ * requesting permission from the user. If you set the parameter to `false` on
+ * initialization you **must** call `requestTrackingPermission()`
+ *  to retrieve the `idfa`
  */
 const idfaPlugin = new IdfaPlugin(false);
 segmentClient.add({ plugin: idfaPlugin });
 
-
-/** `requestTrackingPermission()` will prompt the user for
-tracking permission and returns a promise you can use to
-make additional tracking decisions based on the response
-*/
+/**
+ * `requestTrackingPermission()` will prompt the user for
+ * tracking permission and returns a promise you can use to
+ * make additional tracking decisions based on the response
+ */
 idfaPlugin.requestTrackingPermission().then((enabled: boolean) => {
   console.log('Tracking Enabled -->', enabled);
 });
@@ -85,7 +85,7 @@ Interested in integrating your service with us? Check out our [Partners page](ht
 ```
 MIT License
 
-Copyright (c) 2021 Segment
+Copyright (c) 2022 tokenstreet GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

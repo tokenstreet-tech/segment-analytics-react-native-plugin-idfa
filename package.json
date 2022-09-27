@@ -1,5 +1,5 @@
 {
-    "name": "@segment/analytics-react-native-plugin-idfa",
+    "name": "@tokenstreet/segment-analytics-react-native-plugin-idfa",
     "version": "0.5.0",
     "description": "The hassle-free way to add Segment analytics to your React-Native app.",
     "main": "lib/commonjs/index",
@@ -43,15 +43,15 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/segmentio/analytics-react-native.git",
+        "url": "https://github.com/tokenstreet-tech/segment-analytics-react-native-plugin-idfa.git",
         "directory": "packages/core"
     },
-    "author": "Segment <hello@segment.com> (https://segment.com/)",
+    "author": "Daniel Reichhart <daniel@tokenstreet.com> (https://tokenstreet.com/)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/segmentio/analytics-react-native/issues"
+        "url": "https://github.com/tokenstreet-tech/segment-analytics-react-native-plugin-idfa/issues"
     },
-    "homepage": "https://github.com/segmentio/analytics-react-native#readme",
+    "homepage": "https://github.com/tokenstreet-tech/segment-analytics-react-native-plugin-idfa#readme",
     "peerDependencies": {
         "@segment/analytics-react-native": "*",
         "react": "*",
@@ -63,11 +63,11 @@
         "@semantic-release/changelog": "^6.0.1",
         "@semantic-release/commit-analyzer": "^9.0.2",
         "@semantic-release/git": "^10.0.1",
-        "@semantic-release/github": "^8.0.4",
+        "@semantic-release/github": "^8.0.6",
         "@semantic-release/npm": "^9.0.1",
         "@semantic-release/release-notes-generator": "^10.0.3",
-        "@types/react": "18.0.15",
-        "@types/react-native": "0.69.3",
+        "@types/react": "^18.0.21",
+        "@types/react-native": "^0.70.3",
         "@typescript-eslint/eslint-plugin": "^5.38.1",
         "@typescript-eslint/parser": "^5.38.1",
         "conventional-changelog-conventionalcommits": "^5.0.0",
@@ -78,13 +78,13 @@
         "eslint-plugin-simple-import-sort": "^8.0.0",
         "husky": "^8.0.1",
         "prettier": "2.7.1",
-        "react": "^17.0.2",
-        "react-native": "^0.68.3",
-        "react-native-builder-bob": "^0.18.2",
+        "react": "18.2.0",
+        "react-native": "0.70.1",
+        "react-native-builder-bob": "^0.18.3",
         "rimraf": "^3.0.2",
-        "semantic-release": "^19.0.3",
+        "semantic-release": "^19.0.5",
         "semantic-release-monorepo": "^7.0.5",
-        "typescript": "^4.4.4"
+        "typescript": "^4.8.3"
     },
     "react-native-builder-bob": {
         "source": "src",
