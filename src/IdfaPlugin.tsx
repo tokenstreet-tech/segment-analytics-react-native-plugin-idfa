@@ -13,41 +13,41 @@ const { getTrackingAuthorizationStatus } = AnalyticsReactNativePluginIdfa;
  */
 
 export class IdfaPlugin extends Plugin {
-  type = PluginType.enrichment;
+    type = PluginType.enrichment;
 
-  constructor(shouldAskPermission: boolean = true) {
-    super();
+    constructor(shouldAskPermission: boolean = true) {
+        super();
 
-    if (shouldAskPermission === true) {
-      this.getTrackingStatus();
+        if (shouldAskPermission === true) {
+            this.getTrackingStatus();
+        }
     }
-  }
 
-  /** `requestTrackingPermission()` will prompt the user for 
+    /** `requestTrackingPermission()` will prompt the user for 
 tracking permission and returns a promise you can use to 
 make additional tracking decisions based on the user response 
 */
-  async requestTrackingPermission(): Promise<boolean> {
-    try {
-      let idfaData: IdfaData = await getTrackingAuthorizationStatus();
+    async requestTrackingPermission(): Promise<boolean> {
+        try {
+            let idfaData: IdfaData = await getTrackingAuthorizationStatus();
 
-      this.analytics?.context.set({ device: { ...idfaData } });
-      return idfaData.adTrackingEnabled;
-    } catch (error) {
-      this.analytics?.logger.warn(error);
-      return false;
+            this.analytics?.context.set({ device: { ...idfaData } });
+            return idfaData.adTrackingEnabled;
+        } catch (error) {
+            this.analytics?.logger.warn(error);
+            return false;
+        }
     }
-  }
 
-  getTrackingStatus() {
-    getTrackingAuthorizationStatus()
-      .then((idfa: IdfaData) => {
-        // update our context with the idfa data
-        this.analytics?.context.set({ device: { ...idfa } });
-        return idfa;
-      })
-      .catch((err: any) => {
-        this.analytics?.logger.warn(err);
-      });
-  }
+    getTrackingStatus() {
+        getTrackingAuthorizationStatus()
+            .then((idfa: IdfaData) => {
+                // update our context with the idfa data
+                this.analytics?.context.set({ device: { ...idfa } });
+                return idfa;
+            })
+            .catch((err: any) => {
+                this.analytics?.logger.warn(err);
+            });
+    }
 }
