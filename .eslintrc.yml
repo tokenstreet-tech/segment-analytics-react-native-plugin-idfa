@@ -7,7 +7,6 @@ plugins:
     - '@typescript-eslint'
     - react
     - react-native
-    - jest
     - simple-import-sort
 extends:
     - '@react-native-community'
@@ -16,7 +15,6 @@ extends:
     - plugin:react/all
     - plugin:react/jsx-runtime
     - plugin:react-native/all
-    - plugin:jest/all
     - prettier
 rules:
     '@typescript-eslint/naming-convention': 0
