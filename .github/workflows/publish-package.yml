@@ -16,6 +16,10 @@ jobs:
               run: |
                   git config --global user.name "tokenstreet-tools"
                   git config --global user.email "tools@tokenstreet.com"
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  registry-url: 'https://registry.npmjs.org'
             - run: yarn --frozen-lockfile
             - run: yarn build
             - run: yarn version --${{ github.event.inputs.version }}
