@@ -1,0 +1,25 @@
+name: main
+on:
+    workflow_dispatch:
+        inputs:
+            version:
+                description: "Version ['patch', 'minor', 'major']"
+                required: true
+jobs:
+    publish_package:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  token: ${{ secrets.PERSONAL_ACCESS_TOKEN_TOOLS_TOKENSTREET }}
+            - name: Set git credentials
+              run: |
+                  git config --global user.name "tokenstreet-tools"
+                  git config --global user.email "tools@tokenstreet.com"
+            - run: yarn --frozen-lockfile
+            - run: yarn build
+            - run: yarn version --${{ github.event.inputs.version }}
+            - run: git push --follow-tags
+            - run: yarn publish
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
