@@ -40,7 +40,7 @@ export class IdfaPlugin extends Plugin {
         }
     }
 
-    public getTrackingStatus(): void {
+    private getTrackingStatus(): void {
         getTrackingAuthorizationStatus()
             .then((idfa: IdfaData) => {
                 // Update our context with the idfa data
