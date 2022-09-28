@@ -32,7 +32,9 @@ export class IdfaPlugin extends Plugin {
         try {
             const idfaData: IdfaData = await getTrackingAuthorizationStatus();
 
-            this.analytics?.context.set({ device: { ...idfaData } });
+            this.analytics?.context.set({
+                device: { ...idfaData, advertisingId: idfaData.advertisingId ?? undefined },
+            });
             return idfaData.adTrackingEnabled;
         } catch (error) {
             this.analytics?.logger.warn(error);
@@ -44,7 +46,7 @@ export class IdfaPlugin extends Plugin {
         getTrackingAuthorizationStatus()
             .then((idfa: IdfaData) => {
                 // Update our context with the idfa data
-                this.analytics?.context.set({ device: { ...idfa } });
+                this.analytics?.context.set({ device: { ...idfa, advertisingId: idfa.advertisingId ?? undefined } });
                 return idfa;
             })
             .catch((err) => {
