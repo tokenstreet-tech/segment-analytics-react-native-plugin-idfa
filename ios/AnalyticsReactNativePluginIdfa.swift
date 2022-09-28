@@ -19,7 +19,7 @@ class AnalyticsReactNativePluginIdfa: NSObject {
                 let idfa = status == .authorized ? ASIdentifierManager.shared().advertisingIdentifier.uuidString : self.fallbackValue
                 resolve([
                     "adTrackingEnabled": status == .authorized,
-                    "advertisingId": idfa!,
+                    "advertisingId": idfa,
                     "trackingStatus": self.statusToString(status)
                 ])
             }
@@ -30,7 +30,7 @@ class AnalyticsReactNativePluginIdfa: NSObject {
 
             let context: [String: Any] = [
                 "adTrackingEnabled": adTrackingEnabled,
-                "advertisingId": idfa!,
+                "advertisingId": idfa,
                 "trackingStatus": trackingStatus
             ]
 

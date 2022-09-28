@@ -8,7 +8,7 @@ export enum TrackingStatus {
 
 export interface IdfaData {
     adTrackingEnabled: boolean;
-    advertisingId: string;
+    advertisingId: string | null;
     trackingStatus: TrackingStatus;
 }
 
