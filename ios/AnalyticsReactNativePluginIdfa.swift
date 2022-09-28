@@ -3,7 +3,7 @@ import AppTrackingTransparency
 
 @objc(AnalyticsReactNativePluginIdfa)
 class AnalyticsReactNativePluginIdfa: NSObject {
-    
+
     @objc
     static func requiresMainQueueSetup() -> Bool {
        return true
@@ -27,28 +27,29 @@ class AnalyticsReactNativePluginIdfa: NSObject {
             let adTrackingEnabled: Bool = true
             let trackingStatus: String = "authorized"
             let idfa = adTrackingEnabled ? ASIdentifierManager.shared().advertisingIdentifier.uuidString : fallbackValue
-            
+
             let context: [String: Any] = [
                 "adTrackingEnabled": adTrackingEnabled,
                 "advertisingId": idfa!,
                 "trackingStatus": trackingStatus
             ]
-            
+
             assert(JSONSerialization.isValidJSONObject(context))
-            
+
             resolve(context);
         }
     }
-    
+
     var fallbackValue: String? {
         get {
             // fallback to the IDFV value.
             // this is also sent in event.context.device.id,
             // feel free to use a value that is more useful to you.
-            return UIDevice.current.identifierForVendor?.uuidString
+            // return UIDevice.current.identifierForVendor?.uuidString
+            return nil
         }
     }
-    
+
     @available(iOS 14, *)
     func statusToString(_ status: ATTrackingManager.AuthorizationStatus) -> String {
         var result = "unknown"
