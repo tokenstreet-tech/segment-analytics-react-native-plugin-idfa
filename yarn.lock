@@ -1721,22 +1721,22 @@
   resolved "https://registry.yarnpkg.com/@react-native/polyfills/-/polyfills-2.0.0.tgz#4c40b74655c83982c8cf47530ee7dc13d957b6aa"
   integrity sha512-K0aGNn1TjalKj+65D7ycc1//H9roAQ51GJVk5ZJQFb2teECGmzd86bYDC0aYdbRf7gtovescq4Zt6FR0tgXiHQ==
 
-"@segment/analytics-react-native@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-react-native/-/analytics-react-native-2.9.0.tgz#0b7c03a0b1e587f80c983353f5a6b0747be976bf"
-  integrity sha512-fQmz/LdbdBwxN1+9bTsPya4I3NRS4jiK2nsEGh82X6u3OZZ4Bml8A1t+Ju74YxY2QdsmTQ3qGfwKGOBL/HdTJw==
+"@segment/analytics-react-native@^2.10.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-react-native/-/analytics-react-native-2.10.0.tgz#55f539d332597b68c0ee630e58cf360fa6131fb3"
+  integrity sha512-d5rig/8nGc0t4JpJasU+4tIFXPW3WWMGc4JjOJOFnLuO1XCsss+kdOYDsHIkp+sslZRLJK7oabtqrPTqNQAK9Q==
   dependencies:
     "@react-native-async-storage/async-storage" "^1.15.17"
-    "@segment/sovran-react-native" "^0.4.4"
+    "@segment/sovran-react-native" "^0.4.5"
     deepmerge "^4.2.2"
     js-base64 "^3.7.2"
-    nanoid "^3.1.25"
     promise.allsettled "^1.0.5"
+    react-native-uuid "^2.0.1"
 
-"@segment/sovran-react-native@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@segment/sovran-react-native/-/sovran-react-native-0.4.4.tgz#2f1e1c0280d2cc3f242970b7c76f8e1dd3ddd18e"
-  integrity sha512-YnXhHfFIdqjMb+6ejMA+1oO0KeJPK3Hv0dHYgcWmq5oxVAWrJNTK8rGiRVuVaVQHfSkGg0zQ/nGB09oMUVteDg==
+"@segment/sovran-react-native@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@segment/sovran-react-native/-/sovran-react-native-0.4.5.tgz#2ae057790623cfbd84eb15e4a3bb9835d108f815"
+  integrity sha512-/dvud4hkszRNgTHdb7p822U+NXTuPxifqQzhcrfdjmFoXMafnzOUAi1KxeGV6Qdb73VAIxcnr/8hkTqdjZ3YLw==
   dependencies:
     "@react-native-async-storage/async-storage" "^1.15.15"
     ansi-regex "5.0.1"
@@ -6031,11 +6031,6 @@ mute-stream@~0.0.4:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-nanoid@^3.1.25:
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
-  integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
-
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -7061,6 +7056,11 @@ react-native-gradle-plugin@^0.70.3:
   version "0.70.3"
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz#cbcf0619cbfbddaa9128701aa2d7b4145f9c4fc8"
   integrity sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A==
+
+react-native-uuid@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-uuid/-/react-native-uuid-2.0.1.tgz#ed4e2dfb1683eddb66967eb5dca140dfe1abddb9"
+  integrity sha512-cptnoIbL53GTCrWlb/+jrDC6tvb7ypIyzbXNJcpR3Vab0mkeaaVd5qnB3f0whXYzS+SMoSQLcUUB0gEWqkPC0g==
 
 react-native@0.70.5:
   version "0.70.5"
