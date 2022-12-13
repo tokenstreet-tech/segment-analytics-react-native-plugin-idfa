@@ -71,7 +71,7 @@
         "@semantic-release/npm": "^9.0.1",
         "@semantic-release/release-notes-generator": "^10.0.3",
         "@types/react": "^18.0.26",
-        "@types/react-native": "^0.70.6",
+        "@types/react-native": "^0.70.8",
         "@typescript-eslint/eslint-plugin": "^5.42.1",
         "@typescript-eslint/parser": "^5.44.0",
         "conventional-changelog-conventionalcommits": "^5.0.0",
