@@ -86,7 +86,7 @@
         "react": "18.2.0",
         "react-native": "0.71.3",
         "react-native-builder-bob": "^0.20.4",
-        "rimraf": "^4.1.2",
+        "rimraf": "^4.3.1",
         "run-script-os": "^1.1.6",
         "semantic-release": "^20.1.0",
         "semantic-release-monorepo": "^7.0.5",
