@@ -1861,10 +1861,10 @@
   resolved "https://registry.yarnpkg.com/@react-native/polyfills/-/polyfills-2.0.0.tgz#4c40b74655c83982c8cf47530ee7dc13d957b6aa"
   integrity sha512-K0aGNn1TjalKj+65D7ycc1//H9roAQ51GJVk5ZJQFb2teECGmzd86bYDC0aYdbRf7gtovescq4Zt6FR0tgXiHQ==
 
-"@segment/analytics-react-native@^2.13.0":
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/@segment/analytics-react-native/-/analytics-react-native-2.13.0.tgz#2a612253219cd91ea3716f46d4fa837231d968d8"
-  integrity sha512-Yt2/t7jNcEaMaYRgeT8KqMsemzjIBaxx5jk01+WI/TXPf0P1OBizMjoxYH3Bpv7CzyEVbVSFlUSrJmD5ll9xtQ==
+"@segment/analytics-react-native@^2.13.1":
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/@segment/analytics-react-native/-/analytics-react-native-2.13.1.tgz#c093c145cb1a5a87041fbbfc5fa61c3fb370787c"
+  integrity sha512-IRg0k8rVTNj2U4jpA0VKGioUKYAbvvYf3FNR8BsHDB3Jutmxdh/SPYAttFU1APJ9mQsqMEIEfocbDtwCAL0kAg==
   dependencies:
     "@react-native-async-storage/async-storage" "^1.15.17"
     "@segment/sovran-react-native" "^0.4.5"
