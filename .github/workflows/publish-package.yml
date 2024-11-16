@@ -3,8 +3,13 @@ on:
     workflow_dispatch:
         inputs:
             version:
-                description: "Version ['patch', 'minor', 'major']"
+                type: choice
+                description: Version
                 required: true
+                options:
+                    - patch
+                    - minor
+                    - major
 jobs:
     publish_package:
         runs-on: ubuntu-latest
