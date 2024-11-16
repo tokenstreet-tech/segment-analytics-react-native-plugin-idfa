@@ -85,6 +85,7 @@ Interested in integrating your service with us? Check out our [Partners page](ht
 ```
 MIT License
 
+Copyright (c) 2020 Segment
 Copyright (c) 2022 tokenstreet GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
