@@ -8080,10 +8080,10 @@ selfsigned@^2.4.1:
     "@types/node-forge" "^1.3.0"
     node-forge "^1"
 
-semantic-release-monorepo@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/semantic-release-monorepo/-/semantic-release-monorepo-8.0.0.tgz#0263f1942119c9c41795ddfe025e0d385fe5f4ca"
-  integrity sha512-mCJ0W8oUxcaYBKdBwqzcDVjPgVs4+CYVZzRMSg8F9Eo5kelZFF5v/SBpHhpWI/LXXHxmwtwZ5y6Qe+uoJ8A7QQ==
+semantic-release-monorepo@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/semantic-release-monorepo/-/semantic-release-monorepo-8.0.2.tgz#95fcd4bf5b1717cad5a591ca912222bf531cf166"
+  integrity sha512-TQC6KKIA0ATjii1OT0ZmQqcVzBJoaetJaJBC8FmKkg1IbDR4wBsuX6gl6UHDdijRDl8YyXqahj2hkJNyV6m9Jg==
   dependencies:
     debug "^4.3.4"
     execa "^5.1.1"
