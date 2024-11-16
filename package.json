@@ -15,8 +15,8 @@
         "xcode": "open ios/AnalyticsReactNativePluginIdfa.xcodeproj",
         "pod:install": "export LC_ALL=en_US.UTF-8 && pod-install --quiet",
         "prepare": "run-script-os",
-        "prepare:default": "husky install",
-        "prepare:darwin": "husky install && yarn pod:install"
+        "prepare:default": "husky",
+        "prepare:darwin": "husky && yarn pod:install"
     },
     "lint-staged": {
         "*": "prettier --ignore-unknown --write",
