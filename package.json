@@ -83,7 +83,7 @@
         "pod-install": "^0.3.2",
         "prettier": "2.8.7",
         "react": "18.3.1",
-        "react-native": "0.76.2",
+        "react-native": "0.76.5",
         "react-native-builder-bob": "^0.32.0",
         "rimraf": "^6.0.1",
         "run-script-os": "^1.1.6",
